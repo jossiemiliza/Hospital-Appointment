@@ -1,9 +1,9 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const dbConnect = async () => {
   try {
     mongoose.connect(
-      process.env.MONGO_URI,
+      "mongodb+srv://rhe:changeme@cluster0.stvcu.mongodb.net/test",
       {
         useFindAndModify: true,
         useUnifiedTopology: true,
@@ -11,7 +11,7 @@ const dbConnect = async () => {
         useNewUrlParser: true,
       },
       () => {
-        console.log('DB connected');
+        console.log("DB connected");
       }
     );
   } catch (error) {
